@@ -168,6 +168,10 @@ Simply put, this downloads the file as a temp file, we load it in with `TextFile
 
 Why do we want to support streaming? What about streaming is important, or useful?
 
+#### :check_mark: ANSWER #1:
+
+Streaming is important because it allows us to send the response to the user as soon as it is available. LLM responses can be quite slow, especially when there are a large number of input tokens. Streaming provides a much more responsive experience for the user.
+
 ### On Chat Start:
 
 The next scope is where "the magic happens". On Chat Start is when a user begins a chat session. This will happen whenever a user opens a new chat window, or refreshes an existing chat window.
