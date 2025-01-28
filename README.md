@@ -168,9 +168,9 @@ Simply put, this downloads the file as a temp file, we load it in with `TextFile
 
 Why do we want to support streaming? What about streaming is important, or useful?
 
-#### :check_mark: ANSWER #1:
+#### ✅ Answer #1:
 
-Streaming is important because it allows us to send the response to the user as soon as it is available. LLM responses can be quite slow, especially when there are a large number of input tokens. Streaming provides a much more responsive experience for the user.
+LLMs can introduce a ton of latency, especially when we're providing it with a lot of input tokens. Streaming allows us to send the response to the user as soon as it is available, which provides a much more responsive experience for the user.
 
 ### On Chat Start:
 
@@ -213,6 +213,10 @@ Now, we'll save that into our user session!
 #### ❓ QUESTION #2: 
 
 Why are we using User Session here? What about Python makes us need to use this? Why not just store everything in a global variable?
+
+#### ✅ Answer #2:
+
+We're using User Session here because we want to be able to maintain state between chat sessions. This way we can maintain data unique to each user chatting with the application, without accidentally leaking (potentially private data) to other users.
 
 ### On Message
 
@@ -338,6 +342,21 @@ Upload a PDF file of the recent DeepSeek-R1 paper and ask the following question
 3. What is this paper about?
 
 Does this application pass your vibe check? Are there any immediate pitfalls you're noticing?
+
+#### ✅ Discussion Answer #1:
+1. What is RL and how does it help reasoning? 
+Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward.
+
+In the context of reasoning, RL helps improve the reasoning capabilities of language models by allowing them to learn from their interactions and the feedback they receive, rather than relying solely on supervised data. By using RL, models, like DeepSeek-R1-Zero, can self-evolve their reasoning capabilities through a process of trial and error. This approach has demonstrated significant effectiveness, leading to improved reasoning performance on various benchmarks. Specifically, RL encourages the development of powerful reasoning behaviors without the need for extensive datasets that require manual labeling, making the learning process more efficient.
+2. What is the difference between DeepSeek-R1 and DeepSeek-R1-Zero? 
+The main difference between DeepSeek-R1 and DeepSeek-R1-Zero lies in their approaches to reinforcement learning and the incorporation of data. DeepSeek-R1-Zero demonstrates strong reasoning capabilities and exhibits self-evolution through reinforcement learning, but it faces issues like poor readability and language mixing. In contrast, DeepSeek-R1 builds upon the strengths of DeepSeek-R1-Zero by exploring the use of a small amount of high-quality data as a cold start, aiming to improve reasoning performance and create a user-friendly model. Additionally, DeepSeek-R1 is designed to make its reasoning processes more readable and accessible to the community, addressing some of the drawbacks identified in DeepSeek-R1-Zero.
+3. What is this paper about? I don't know the answer.
+
+
+Does this application pass your vibe check? Are there any immediate pitfalls you're noticing? It particularly struggled to answer broad high-level questions, like what the totality of th paper is about. The app did okay, but clearly there are gaps. This parituclar issue is likely the result of suboptimal chunking.
+
+-----------------
+
 
 ## 🚧 CHALLENGE MODE 🚧
 
