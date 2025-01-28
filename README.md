@@ -345,13 +345,12 @@ Does this application pass your vibe check? Are there any immediate pitfalls you
 
 #### ✅ Discussion Answer #1:
 1. What is RL and how does it help reasoning? 
-Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward.
+Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward. In the context of reasoning, RL helps improve the reasoning capabilities of language models by allowing them to learn from their interactions and the feedback they receive, rather than relying solely on supervised data. By using RL, models, like DeepSeek-R1-Zero, can self-evolve their reasoning capabilities through a process of trial and error. This approach has demonstrated significant effectiveness, leading to improved reasoning performance on various benchmarks. Specifically, RL encourages the development of powerful reasoning behaviors without the need for extensive datasets that require manual labeling, making the learning process more efficient.
 
-In the context of reasoning, RL helps improve the reasoning capabilities of language models by allowing them to learn from their interactions and the feedback they receive, rather than relying solely on supervised data. By using RL, models, like DeepSeek-R1-Zero, can self-evolve their reasoning capabilities through a process of trial and error. This approach has demonstrated significant effectiveness, leading to improved reasoning performance on various benchmarks. Specifically, RL encourages the development of powerful reasoning behaviors without the need for extensive datasets that require manual labeling, making the learning process more efficient.
 2. What is the difference between DeepSeek-R1 and DeepSeek-R1-Zero? 
 The main difference between DeepSeek-R1 and DeepSeek-R1-Zero lies in their approaches to reinforcement learning and the incorporation of data. DeepSeek-R1-Zero demonstrates strong reasoning capabilities and exhibits self-evolution through reinforcement learning, but it faces issues like poor readability and language mixing. In contrast, DeepSeek-R1 builds upon the strengths of DeepSeek-R1-Zero by exploring the use of a small amount of high-quality data as a cold start, aiming to improve reasoning performance and create a user-friendly model. Additionally, DeepSeek-R1 is designed to make its reasoning processes more readable and accessible to the community, addressing some of the drawbacks identified in DeepSeek-R1-Zero.
-3. What is this paper about? I don't know the answer.
 
+3. What is this paper about? I don't know the answer.
 
 Does this application pass your vibe check? Are there any immediate pitfalls you're noticing? It particularly struggled to answer broad high-level questions, like what the totality of th paper is about. The app did okay, but clearly there are gaps. This parituclar issue is likely the result of suboptimal chunking.
 
